@@ -1,0 +1,16 @@
+[Unit]
+Description=Dynatrace Syslog forwarder
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u dtsyslogd.py
+WorkingDirectory=/opt/dynatrace/batch/dtsyslogd
+
+SyslogIdentifier=dtsyslogd
+
+Restart=always
+RestartSec=5
+User=dtuserag
+
+[Install]
+WantedBy=multi-user.target
