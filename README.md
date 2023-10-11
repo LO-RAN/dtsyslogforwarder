@@ -20,7 +20,7 @@ sudo systemctl enable dtsyslogd.service
 ```
 
 
-## to test the feature, just type a shell comamand like the following : 
+## to test the feature, just type a shell command like the following : 
 
 ```bash
 nc -w0 -u <theHostWhereThedtsyslogdscriptIsRunning> 8514 <<< "some message to send to syslog"
